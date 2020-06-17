@@ -20,7 +20,7 @@ export const reducer = (state, action) => {
             return {
                 ...state,
                 todos: [...state.todos, action.payload]
-            }
+            };
 
         case "TOGGLE_COMPLETED":
             return {
