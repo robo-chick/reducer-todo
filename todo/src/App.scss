@@ -12,7 +12,7 @@ body {
 	text-align: center;
 	width: 800px;
 	height: auto;
-	margin: 50px auto;
+	margin: 20px auto;
 	padding: 75px 0px;
 	display: flex;
     flex-direction: column;
@@ -30,7 +30,7 @@ body {
 
     .to-do-input {
         line-height: 1.8rem;
-        font-size: 1rem; 
+        font-size: 1rem;   
     }
 }
 
@@ -52,14 +52,14 @@ body {
     color: white;
     border-radius: 4px;
     cursor: pointer;
-    width: 33%;
+    width: 15vh;
     margin: 2%;
     padding: 1%;
 }
 
 .completed {
     text-decoration: line-through;
-    color: #092640;
+    color: #092640
 }
 
 

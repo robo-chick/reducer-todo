@@ -5,7 +5,7 @@ import TodoForm from './TodoForm';
 
 const TodoList = () => {
     const [state, dispatch] = useReducer(reducer, initialState)
-    console.log(state);
+    // console.log(state);
 
     return (
         <div className="todo-list">

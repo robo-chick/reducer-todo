@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import moment from 'moment';
 
 
 const TodoForm = (props) => {
@@ -13,13 +14,14 @@ const TodoForm = (props) => {
         setNewTodo('');
         props.dispatch({
             type: "ADD_TODO",
-            payload: { item: newTodo, completed: false, id: Date.now() }
+            payload: { item: newTodo, completed: false, 
+            id: Date.now(),
+            time: moment().format('llll') }
         })
-        setNewTodo('')
+        setNewTodo('');
     }
 
     const clearCompleted = e => {
-        console.log("hello");
         e.preventDefault();
         props.dispatch({type: "CLEAR_COMPLETED"})
     }
@@ -31,6 +33,7 @@ const TodoForm = (props) => {
                     className="todo-input"
                     type="text"
                     name="newTodo"
+                    placeholder="Enter Task"
                     value={newTodo}
                     onChange={handleChanges}
                     />

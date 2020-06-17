@@ -1,14 +1,13 @@
+import moment from 'moment';
+
+
 export const initialState = {
     todos: [
         {
-            item: "work on todo project",
+            item: "",
             completed: false,
-            id: 1
-        },
-        {
-            item: "go to the gym",
-            completed: false,
-            id: 2
+            id: "",
+            time: moment().format('llll')
         }
     ]
 }
@@ -25,15 +24,16 @@ export const reducer = (state, action) => {
         case "TOGGLE_COMPLETED":
             return {
                 ...state,
-                todos: state.todos.map((e) => {
-                    if (e.id === action.payload) {
+                todos: state.todos.map((todo) => {
+                    if (todo.id === action.payload) {
                         return {
 
-                            ...e,
-                            completed: !e.completed
+                            ...todo,
+                            completed: !todo.completed,
+                            time: todo.time
                         }
                     } else {
-                        return e;
+                        return todo;
                     }
                 })
             }
@@ -41,7 +41,7 @@ export const reducer = (state, action) => {
         case "CLEAR_COMPLETED":
             return {
                 ...state,
-                todos: state.todos.filter(item => !item.completed)
+                todos: state.todos.filter(todo => !todo.completed)
             }
     }
 }
