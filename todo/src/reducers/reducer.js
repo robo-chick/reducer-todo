@@ -7,7 +7,7 @@ export const initialState = {
             item: "",
             completed: false,
             id: "",
-            time: moment().format('llll')
+            
         }
     ]
 }
@@ -22,6 +22,7 @@ export const reducer = (state, action) => {
             };
 
         case "TOGGLE_COMPLETED":
+            let timeCompleted = moment().format('MMM Do YYY, h:mm:ss a')
             return {
                 ...state,
                 todos: state.todos.map((todo) => {
@@ -30,7 +31,7 @@ export const reducer = (state, action) => {
 
                             ...todo,
                             completed: !todo.completed,
-                            time: todo.time
+                            timeCompleted: todo.completed === false && timeCompleted
                         }
                     } else {
                         return todo;

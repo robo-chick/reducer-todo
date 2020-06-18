@@ -12,9 +12,12 @@ export default function Todo({ todo, dispatch }) {
     
 
     return (
+        <>
         <div className={`todo ${todo.completed ? "completed" : ""}`}
         onClick={() => handleChanges(todo.id)}>
             <p>{todo.item}</p>
         </div>
+        <p className="time-completed" style={{textDecoration: "none"}}>{todo.timeCompleted}</p>
+        </>
     )
 }

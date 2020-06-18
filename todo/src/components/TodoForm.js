@@ -16,7 +16,7 @@ const TodoForm = (props) => {
             type: "ADD_TODO",
             payload: { item: newTodo, completed: false, 
             id: Date.now(),
-            time: moment().format('llll') }
+            }
         })
         setNewTodo('');
     }
