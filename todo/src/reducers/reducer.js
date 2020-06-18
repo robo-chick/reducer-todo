@@ -4,10 +4,11 @@ import moment from 'moment';
 export const initialState = {
     todos: [
         {
-            item: "",
+            item: "Make a javascript",
             completed: false,
             id: "",
-            
+            due: moment().format('ddd, MMM Do YYYY'),
+            raw: ""
         }
     ]
 }
@@ -22,7 +23,7 @@ export const reducer = (state, action) => {
             };
 
         case "TOGGLE_COMPLETED":
-            let timeCompleted = moment().format('MMM Do YYY, h:mm:ss a')
+            let timeCompleted = moment().format('MMM Do YYYY, h:mm:ss a')
             return {
                 ...state,
                 todos: state.todos.map((todo) => {

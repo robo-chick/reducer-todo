@@ -24,8 +24,8 @@ body {
         
 .todo-form {
     display: flex;
-    justify-content: space-around;
-    width: 50%;
+    flex-direction: column;
+    width: 85%;
     margin: 0px auto;
 
     .to-do-input {
