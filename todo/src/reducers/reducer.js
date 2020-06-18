@@ -13,8 +13,8 @@ export const initialState = {
 }
 
 export const reducer = (state, action) => {
-    console.log(action);
-    switch(action.type) {
+    // console.log(action);
+    switch (action.type) {
         case "ADD_TODO":
             return {
                 ...state,
@@ -43,5 +43,7 @@ export const reducer = (state, action) => {
                 ...state,
                 todos: state.todos.filter(todo => !todo.completed)
             }
+            default:
+                return state;
     }
 }
