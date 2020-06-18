@@ -4,7 +4,7 @@ import moment from 'moment';
 export const initialState = {
     todos: [
         {
-            item: "Make a javascript",
+            item: "Make a javascript!",
             completed: false,
             id: "",
             due: moment().format('ddd, MMM Do YYYY'),

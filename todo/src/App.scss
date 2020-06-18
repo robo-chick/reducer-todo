@@ -19,6 +19,7 @@ body {
 
     h2 {
         font-family: 'Asap', sans-serif;
+        color: #092640;
     }
 }
         
@@ -62,11 +63,26 @@ body {
     color: #092640;
 }
 
-// .time-completed {
-//     text-decoration: none;
-//     color: white;
-//     font-size: .5rem;
-// }
+.due-date {
+    font-size: 1rem;
+}
+
+.overdue {
+    font-size: 1rem;
+    color: #DC143C
+    ;
+}
+
+.time-completed {
+    color: #092640;
+    font-size: .75rem;
+}
+
+
+
+
+
+
 
 
 

@@ -19,13 +19,17 @@ export default function Todo({ todo, dispatch }) {
             <p>{todo.item}</p>
         </div>
 
-        <p className="time-completed" style={{textDecoration: "none"}}>{todo.timeCompleted}</p>
-        {moment(todo.raw).isBefore(moment()) && !todo.completed && (
-            <p>Overdue!</p>
-        )}
         {todo.due && (
-            <p>Due Date is: {todo.due}</p>
+            <p className="due-date">Due Date: {todo.due}</p>
         )}
+
+        {moment(todo.raw).isBefore(moment()) && !todo.completed && (
+        <p className="overdue">Overdue!</p>
+        )}
+
+        <p className="time-completed" style={{textDecoration: "none"}}>Completed: {todo.timeCompleted}</p>
+        
+       
 
         </>
     )
