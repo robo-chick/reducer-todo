@@ -1,0 +1,89 @@
+body {
+    background: #FFA17F;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #00223E, #FFA17F);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #00223E, #FFA17F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */   
+    color: white;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.5rem;
+}
+
+.App {
+    border-radius: 20px;
+	text-align: center;
+	width: 800px;
+	height: auto;
+	margin: 20px auto;
+	padding: 75px 0px;
+	display: flex;
+    flex-direction: column;
+
+    h2 {
+        font-family: 'Asap', sans-serif;
+        color: #092640;
+    }
+}
+        
+.todo-form {
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    margin: 0px auto;
+
+    .to-do-input {
+        line-height: 1.8rem;
+        font-size: 1rem;   
+    }
+}
+
+.todo-list {
+    margin: 10px auto;
+    max-width: 400px;
+
+    .todo {
+        width: 100%;
+        &:hover {
+           color: #092640;
+        }
+    }
+}
+
+.btn {
+    border: 1px solid #092640;
+    background-color: #092640;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 15vh;
+    margin: 2%;
+    padding: 1%;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: #092640;
+}
+
+.due-date {
+    font-size: 1rem;
+}
+
+.overdue {
+    font-size: 1rem;
+    color: #DC143C
+    ;
+}
+
+.time-completed {
+    color: #092640;
+    font-size: .75rem;
+}
+
+
+
+
+
+
+
+
+
+    
